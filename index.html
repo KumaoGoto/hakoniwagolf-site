@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>箱庭ゴルフ — サポート</title>
+<meta name="description" content="風を読んで回る、ジオラマのゴルフパズル。iOS アプリ「箱庭ゴルフ」のサポートページ。">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  /* 色はアプリと同じ（App/Shell/Theme.swift: paper・paper2・ink・ink2・flag・forest）。外部の読み込みは無い */
+  :root{--paper:#F3F6EC;--line:#DCE6D3;--card:#FFFFFF;--ink:#123A2C;--ink2:#5B7569;--flag:#E23F2C;--forest:#183D2D;--gold:#B07A12}
+  *{box-sizing:border-box}
+  html{background:var(--paper)}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+       line-height:1.85;-webkit-text-size-adjust:100%;font-size:15px}
+  .wrap{max-width:36rem;margin:0 auto;padding-block:2.25rem 4rem;
+        padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:1.25rem}
+  header img{width:72px;height:72px;border-radius:17px;flex:none;box-shadow:0 2px 0 var(--line),0 6px 16px rgba(18,58,44,.18)}
+  h1{font-size:1.85rem;line-height:1.2;margin:0;letter-spacing:.04em;text-wrap:balance}
+  h1 .flag{display:inline-block;width:.18em;height:.95em;margin-left:.25em;vertical-align:-.08em;
+           background:linear-gradient(var(--flag),var(--flag)) left top/100% 42% no-repeat,linear-gradient(var(--ink),var(--ink)) left top/18% 100% no-repeat}
+  .lead{margin:.2rem 0 0;color:var(--ink2);font-weight:700;font-size:.95rem}
+  /* スコアカードの帯: コース・ホール・番手の数 */
+  .card-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:1.25rem 0 1.5rem;border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--card)}
+  .card-strip div{padding:.45rem .25rem .55rem;text-align:center;border-left:1.5px solid var(--line)}
+  .card-strip div:first-child{border-left:0}
+  .card-strip b{display:block;font-size:1.45rem;line-height:1.2;font-variant-numeric:tabular-nums}
+  .card-strip span{font-size:.72rem;letter-spacing:.12em;color:var(--ink2);font-weight:700}
+  h2{font-size:1.02rem;margin:2.2rem 0 .6rem;padding-top:.9rem;border-top:1.5px solid var(--line);text-wrap:balance}
+  p{margin:.5rem 0}
+  ul.how{list-style:none;padding:0;margin:.75rem 0;display:grid;gap:8px}
+  ul.how li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.65rem .9rem}
+  ul.how b{display:block}
+  ul.how span{color:var(--ink2);font-size:.92rem}
+  .q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;margin:.65rem 0}
+  .q h3{font-size:.97rem;margin:0 0 .25rem;line-height:1.6}
+  .q p{margin:.25rem 0 0;color:var(--ink2);font-size:.93rem}
+  .q b{color:var(--ink)}
+  a{color:var(--ink);text-underline-offset:3px}
+  a.button{display:block;text-align:center;text-decoration:none;font-weight:700;color:var(--ink);background:var(--card);
+           border:2px solid var(--ink);border-radius:14px;padding:.75rem 1rem;margin:1rem 0 .4rem;box-shadow:0 3px 0 var(--ink)}
+  .note{font-size:.82rem;color:var(--ink2);text-align:center;margin:0}
+  .mail{font-size:1.05rem;font-weight:700;word-break:break-all}
+  footer{margin-top:3rem;text-align:center;color:var(--ink2);font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img src="icon.png" alt="" width="72" height="72">
+  <div>
+    <h1>箱庭ゴルフ<span class="flag" aria-hidden="true"></span></h1>
+    <p class="lead">風を読んで、曲げて、カップに沈める。</p>
+  </div>
+</header>
+
+<p>
+  机の上に置いた小さなジオラマのゴルフ場を、風を読んで回る iPhone のゴルフパズルです。
+  ホールごとに決まった風と、打つ前にかける回転で、木をよけ、池を越え、グリーンに止めます。
+  1 ホールずつ挑んでパー以内で合格（1 打少なければ金）。コースごとに 18 ホールを続けて回るラウンドと、ランキングもあります。
+</p>
+
+<div class="card-strip" role="list" aria-label="収録">
+  <div role="listitem"><b>6</b><span>コース</span></div>
+  <div role="listitem"><b>108</b><span>ホール</span></div>
+  <div role="listitem"><b>7</b><span>本のクラブ</span></div>
+</div>
+
+<h2>遊び方</h2>
+<ul class="how">
+  <li><b>引っぱって打つ</b><span>画面のどこでも、引いて離すとショット。指を元の所へ戻すと取り消し。</span></li>
+  <li><b>打つ前に回転をかける</b><span>球の図の点を動かすと、カーブ・バックスピン・トップスピン。</span></li>
+  <li><b>風を読んで、パー以内に</b><span>点線は風がないときの弾道。流されるぶんは自分で読みます。</span></li>
+</ul>
+
+<a class="button" href="https://hakoniwagolf.kumao.app/">ブラウザ版で遊んでみる</a>
+<p class="note">ブラウザ版は「春の名門」の 18 ホールだけ・広告なし。スマホでもパソコンでも遊べます。</p>
+
+<h2>よくある質問</h2>
+
+<div class="q">
+  <h3>狙った所に飛びません。</h3>
+  <p>打つ前の点線は、風がないときの球の道すじです。ホールの風（向きと強さ）で流されるぶんは自分で読み、狙いと回転で打ち消してください。風も、木に当たったときの跳ね返りも、同じ打ち方なら同じ結果になります。</p>
+</div>
+
+<div class="q">
+  <h3>ラウンドを途中でやめたい。</h3>
+  <p>ラウンド中は画面の上の<b>メニュー</b>から<b>「タイトルへ」</b>を選ぶと、続きが残ります（アプリを閉じても残ります）。<b>「やめる」</b>を 2 回押すと、その回の記録を消してやめます。</p>
+</div>
+
+<div class="q">
+  <h3>「広告を消す」を買ったのに、入れ直したあとや別の iPhone で広告が出ます。</h3>
+  <p>タイトルの右上の<b>歯車 → 設定 →「購入を復元」</b>を押してください。同じ Apple アカウントで買った「広告を消す」が戻ります。</p>
+</div>
+
+<div class="q">
+  <h3>ランキングに載せるには？</h3>
+  <p>18 ホールのラウンドを回り終えると「ランキングに載せますか？」と聞きます。<b>「載せる」</b>を押し、利用規約に同意して名前（10 文字まで）を決めると載ります。載るのはコースごとに、いちばん打数の少ない回です。参加しなければ、何も送りません。</p>
+</div>
+
+<div class="q">
+  <h3>不適切な名前や、ありえない記録を見つけました。</h3>
+  <p>ランキングでその人の名前を押し、<b>「通報する（名前）」</b>か<b>「通報する（ありえない記録）」</b>を選んでください。運営が確かめてから対応します。見たくない人は<b>「この人を表示しない」</b>を選ぶと、あなたのランキングに出なくなります。</p>
+</div>
+
+<div class="q">
+  <h3>ランキングをやめて、名前と記録を消したい。</h3>
+  <p>ランキングの画面で自分の名前（名前を変える）を押し、<b>「ランキングをやめて記録を消す」</b>を押すと、名前と記録をサーバーから消します。アプリを先に消してしまったときは、下の連絡先まで、ランキングに出ていた名前とコースをお知らせください。削除します。</p>
+</div>
+
+<div class="q">
+  <h3>ブラウザ版とは何が違いますか。</h3>
+  <p>ブラウザ版は「春の名門」の 18 ホールだけで、広告はありません。アプリは 6 コース・108 ホールです。「春の名門」のランキングはブラウザ版と共通で、両方の参加者が一緒に並びます。ホールの記録やラウンドの続きは、それぞれ別に残ります。</p>
+</div>
+
+<h2>お問い合わせ</h2>
+<p>不具合・ご意見・削除のご依頼は、こちらまでお願いします。</p>
+<p class="mail"><a href="mailto:support.kumaogoto@gmail.com?subject=%E7%AE%B1%E5%BA%AD%E3%82%B4%E3%83%AB%E3%83%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">support.kumaogoto@gmail.com</a></p>
+<p>お使いの iPhone の機種と iOS のバージョン、どのコースの何番かを書き添えていただけると助かります。</p>
+
+<h2>プライバシーポリシー</h2>
+<p><a href="privacy.html">「箱庭ゴルフ」プライバシーポリシー（iOS アプリ）</a></p>
+
+<footer>© 2026 Mitsuaki Goto</footer>
+</div>
+</body>
+</html>
